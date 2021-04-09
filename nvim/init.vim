@@ -8,6 +8,8 @@ Plug 'TheAtlasEngine/PastelColors'
 Plug 'gruvbox-community/gruvbox'
 Plug 'fcpg/vim-fahrenheit'
 Plug 'tpope/vim-commentary'
+Plug 'ggreer/the_silver_searcher'
+Plug 'preservim/nerdcommenter'
 call plug#end()
 
 let g:gruvbox_contrast_dark='hard'
@@ -34,6 +36,11 @@ set scrolloff=8
 let mapleader = ' '
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>af :CocCommand eslint.executeAutofix<CR>
+nnoremap <leader>fb :Buffers<CR>
+nnoremap <C-n> :bn<CR>
+nnoremap <C-p> :bp<CR>
+
+let g:NERDCreateDefaultMappings = 1
 
 " for CoC
 " Use K to show documentation in preview window
@@ -77,3 +84,6 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <silent> <leader>cff :Files <C-r>=expand("%:h")<CR>/<CR>
+
