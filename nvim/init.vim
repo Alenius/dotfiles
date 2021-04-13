@@ -9,7 +9,8 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'fcpg/vim-fahrenheit'
 Plug 'tpope/vim-commentary'
 Plug 'ggreer/the_silver_searcher'
-Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 let g:gruvbox_contrast_dark='hard'
@@ -36,9 +37,9 @@ set scrolloff=8
 let mapleader = ' '
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>af :CocCommand eslint.executeAutofix<CR>
-nnoremap <leader>fb :Buffers<CR>
-nnoremap <C-n> :bn<CR>
-nnoremap <C-p> :bp<CR>
+nnoremap <leader>dd :Buffers<CR>
+nnoremap <leader>rr :Rg 
+nnoremap <leader>p <C-^>
 
 let g:NERDCreateDefaultMappings = 1
 
