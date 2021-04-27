@@ -1,0 +1,254 @@
+{
+	"title": "aa-home-rules",
+		"rules": [
+		{
+			"description": "cmd + [ to å",
+			"manipulators": [
+			{
+				"from": {
+					"key_code": "open_bracket",
+					"modifiers": {
+						"mandatory": [
+							"left_command"
+						]
+					}
+				},
+				"to": [
+				{
+					"key_code": "a",
+					"modifiers": [
+						"left_option"
+					]
+				}
+				],
+				"type": "basic"
+			}
+			]
+		},
+		{
+			"description": "left shift + cmd + [ to  Å",
+			"manipulators": [
+			{
+				"from": {
+					"key_code": "open_bracket",
+					"modifiers": {
+						"mandatory": [
+							"left_command",
+						"left_shift"
+						]
+					}
+				},
+				"to": [
+				{
+					"key_code": "a",
+					"modifiers": [
+						"left_option",
+					"left_shift"
+					]
+				}
+				],
+				"type": "basic"
+			}
+			]
+		},
+		{
+			"description": "cmd + ; to ö",
+			"manipulators": [
+			{
+				"from": {
+					"key_code": "semicolon",
+					"modifiers": {
+						"mandatory": [
+							"left_command"
+						]
+					}
+				},
+				"to": [
+				{
+					"key_code": "u",
+					"modifiers": [
+						"left_option"
+					]
+				},
+				{
+					"key_code": "o"
+				}
+				],
+				"type": "basic"
+			}
+			]
+		},
+		{
+			"description": "cmd + ; to Ö",
+			"manipulators": [
+			{
+				"from": {
+					"key_code": "semicolon",
+					"modifiers": {
+						"mandatory": [
+							"left_command",
+						"left_shift"
+						]
+					}
+				},
+				"to": [
+				{
+					"key_code": "u",
+					"modifiers": [
+						"left_option"
+					]
+				},
+				{
+					"key_code": "o",
+					"modifiers": [
+						"left_shift"
+					]
+				}
+				],
+				"type": "basic"
+			}
+			]
+		},
+		{
+			"description": "cmd + ; to ä",
+			"manipulators": [
+			{
+				"from": {
+					"key_code": "quote",
+					"modifiers": {
+						"mandatory": [
+							"left_command"
+						]
+					}
+				},
+				"to": [
+				{
+					"key_code": "u",
+					"modifiers": [
+						"left_option"
+					]
+				},
+				{
+					"key_code": "a"
+				}
+				],
+				"type": "basic"
+			}
+			]
+		},
+		{
+			"description": "cmd + ; to Ä",
+			"manipulators": [
+			{
+				"from": {
+					"key_code": "quote",
+					"modifiers": {
+						"mandatory": [
+							"left_command",
+						"left_shift"
+						]
+					}
+				},
+				"to": [
+				{
+					"key_code": "u",
+					"modifiers": [
+						"left_option"
+					]
+				},
+				{
+					"key_code": "a",
+					"modifiers": [
+						"left_shift"
+					]
+				}
+				],
+				"type": "basic"
+			}
+			]
+		},
+		{
+			"description": "Change Command + i/j/k/l to Arrows",
+			"manipulators": [
+			{
+				"from": {
+					"key_code": "j",
+					"modifiers": {
+						"mandatory": [
+							"right_command"
+						],
+						"optional": [
+							"any"
+						]
+					}
+				},
+				"to": [
+				{
+					"key_code": "left_arrow"
+				}
+				],
+				"type": "basic"
+			},
+			{
+				"from": {
+					"key_code": "k",
+					"modifiers": {
+						"mandatory": [
+							"right_command"
+						],
+						"optional": [
+							"any"
+						]
+					}
+				},
+				"to": [
+				{
+					"key_code": "down_arrow"
+				}
+				],
+				"type": "basic"
+			},
+			{
+				"from": {
+					"key_code": "i",
+					"modifiers": {
+						"mandatory": [
+							"right_command"
+						],
+						"optional": [
+							"any"
+						]
+					}
+				},
+				"to": [
+				{
+					"key_code": "up_arrow"
+				}
+				],
+				"type": "basic"
+			},
+			{
+				"from": {
+					"key_code": "l",
+					"modifiers": {
+						"mandatory": [
+							"right_command"
+						],
+						"optional": [
+							"any"
+						]
+					}
+				},
+				"to": [
+				{
+					"key_code": "right_arrow"
+				}
+				],
+				"type": "basic"
+			}
+			]
+		
+}
+]
+}
+
