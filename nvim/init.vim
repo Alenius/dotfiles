@@ -12,6 +12,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'BurntSushi/ripgrep'
 Plug 'TheAtlasEngine/PastelColors'
 Plug 'gruvbox-community/gruvbox'
+Plug 'cormacrelf/vim-colors-github'
 Plug 'fcpg/vim-fahrenheit'
 Plug 'tpope/vim-commentary'
 Plug 'ggreer/the_silver_searcher'
@@ -25,11 +26,12 @@ Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jparise/vim-graphql'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_termcolors='16'
-colorscheme gruvbox
+colorscheme github
 
 set tabstop=2 softtabstop=2
 set shiftwidth=2
@@ -57,8 +59,11 @@ nnoremap <leader>af :CocCommand eslint.executeAutofix<CR>
 nnoremap <leader>dd :Buffers<CR>
 nnoremap <leader>rr :Rg 
 nnoremap <leader>p <C-^>
+nnoremap <leader>p <C-^>
+nnoremap <leader>n :NERDTreeFind<cr>
 
 let g:NERDCreateDefaultMappings = 1
+let g:NERDTreeWinPos = "right"
 
 " for CoC
 " Use K to show documentation in preview window
