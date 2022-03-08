@@ -130,3 +130,5 @@ nnoremap <C-l> <C-W>l
 
 nmap <silent> + <C-W>>
 nmap <silent> - <C-W><
+
+let g:airline#extensions#projectdir#enabled = 1
