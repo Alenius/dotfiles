@@ -119,6 +119,7 @@ fun! GotoWindow(id)
     MaximizerToggle
 endfunction
 
-" make it possible to pass arguments to ripgrep
-command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".<q-args>, 1, <bang>0)
+" keep split when closing buffer
+" command Bd bp\|bd \#
+command Bd bp | sp | bn | bd
 
