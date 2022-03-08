@@ -55,13 +55,15 @@ set ignorecase
 set smartcase
 
 let mapleader = ' '
-nnoremap <leader>ff :Files<CR>
+nnoremap <leader>ff :GFiles<CR>
+nnoremap <leader>faf :Files<CR>
 nnoremap <leader>af :CocCommand eslint.executeAutofix<CR>
 nnoremap <leader>dd :Buffers<CR>
 nnoremap <leader>rr :Rg 
 nnoremap <leader>p <C-^>
 nnoremap <leader>p <C-^>
 nnoremap <leader>n :NERDTreeFind<cr>
+nnoremap <leader>gi :vertical Git<cr>
 
 let g:NERDCreateDefaultMappings = 1
 let g:NERDTreeWinPos = "right"
