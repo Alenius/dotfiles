@@ -45,13 +45,14 @@ set hidden
 set noerrorbells
 set nowrap
 set incsearch
-set colorcolumn=100
 set signcolumn=yes
 set termguicolors
 set scrolloff=8
 set list
 set listchars=tab:>-  
 set splitright
+set ignorecase
+set smartcase
 
 let mapleader = ' '
 nnoremap <leader>ff :Files<CR>
