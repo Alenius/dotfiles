@@ -31,7 +31,8 @@ call plug#end()
 
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_termcolors='16'
-colorscheme github
+set bg=light
+colorscheme gruvbox
 
 set tabstop=2 softtabstop=2
 set shiftwidth=2
