@@ -54,6 +54,9 @@ set listchars=tab:>-
 set splitright
 set ignorecase
 set smartcase
+" title name in terminal tab
+set title
+set titlestring=%f
 
 let mapleader = ' '
 nnoremap <leader>ff :GFiles<CR>
