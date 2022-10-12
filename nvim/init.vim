@@ -52,6 +52,7 @@ set termguicolors
 set scrolloff=8
 set list
 set listchars=tab:>-  
+set lcs+=space:· " show spaces as dots
 set splitright
 set ignorecase
 set smartcase
