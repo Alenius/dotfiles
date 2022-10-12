@@ -27,6 +27,7 @@ Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jparise/vim-graphql'
 Plug 'preservim/nerdtree'
+Plug 'yssl/QFEnter'
 call plug#end()
 
 let g:gruvbox_contrast_dark='hard'
