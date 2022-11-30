@@ -70,6 +70,8 @@ nnoremap <leader>p <C-^>
 nnoremap <leader>p <C-^>
 nnoremap <leader>n :NERDTreeFind<cr>
 nnoremap <leader>gi :vertical Git<cr>
+" previous git revisions
+nnoremap <leader>gp :0GlLog<cr>
 
 let g:NERDCreateDefaultMappings = 1
 let g:NERDTreeWinPos = "right"
@@ -119,7 +121,6 @@ fun! GotoWindow(id)
 endfunction
 
 " keep split when closing buffer
-" command Bd bp\|bd \#
 command Bd bp | sp | bn | bd
 
 nnoremap <C-j> <C-W>j
@@ -138,3 +139,5 @@ autocmd! FileType qf nnoremap <buffer> <leader><Enter> <C-w><Enter><C-w>L
 " colors for definition pop out window highlighting
 hi CocMenuSel guifg=#e4e4e4 guibg=#000000
 hi CocSearch guifg=#0087ff
+
+lua require("scripts")
