@@ -9,6 +9,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'BurntSushi/ripgrep'
 Plug 'TheAtlasEngine/PastelColors'
 Plug 'gruvbox-community/gruvbox'
@@ -59,6 +60,7 @@ set smartcase
 " title name in terminal tab
 set title
 set titlestring=%f
+set cursorline
 
 let mapleader = ' '
 nnoremap <leader>ff :GFiles<CR>
