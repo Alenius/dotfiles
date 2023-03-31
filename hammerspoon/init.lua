@@ -1,5 +1,5 @@
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "i", function()
-  hs.eventtap.keyStrokes(os.date("%c"))
+  hs.eventtap.keyStrokes(os.date("%a %b %d %Y %H:%M"))
 end)
 
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "j", function()
