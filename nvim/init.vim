@@ -29,9 +29,11 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jparise/vim-graphql'
 Plug 'preservim/nerdtree'
 Plug 'yssl/QFEnter'
+Plug 'github/copilot.vim'
 call plug#end()
 
 let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='hard'
 let g:gruvbox_termcolors='16'
 set bg=light
 colorscheme gruvbox
