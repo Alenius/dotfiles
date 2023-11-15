@@ -30,12 +30,13 @@ Plug 'jparise/vim-graphql'
 Plug 'preservim/nerdtree'
 Plug 'yssl/QFEnter'
 Plug 'github/copilot.vim'
+Plug 'f-person/auto-dark-mode.nvim'
 call plug#end()
 
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_contrast_light='hard'
 let g:gruvbox_termcolors='16'
-set bg=light
+set bg=dark
 colorscheme gruvbox
 
 set tabstop=2 softtabstop=2
@@ -125,7 +126,7 @@ fun! GotoWindow(id)
 endfunction
 
 " keep split when closing buffer
-command Bd bp | sp | bn | bd
+command! Bd bp | sp | bn | bd
 
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
@@ -145,3 +146,5 @@ hi CocMenuSel guifg=#e4e4e4 guibg=#000000
 hi CocSearch guifg=#0087ff
 
 lua require("scripts")
+lua require('auto-dark-mode').setup()
+
