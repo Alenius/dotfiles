@@ -64,6 +64,8 @@ set smartcase
 set title
 set titlestring=%f
 set cursorline
+set foldmethod=syntax
+set foldopen+=jump
 
 let mapleader = ' '
 nnoremap <leader>ff :GFiles<CR>
@@ -141,6 +143,8 @@ let g:airline#extensions#projectdir#enabled = 1
 " make it easier to open buffers from quickfix window
 autocmd! FileType qf nnoremap <buffer> <leader><Enter> <C-w><Enter><C-w>L
 
+autocmd BufEnter *.graphql :setlocal tabstop=3 shiftwidth=3 expandtab!
+
 " colors for definition pop out window highlighting
 hi CocMenuSel guifg=#e4e4e4 guibg=#000000
 hi CocSearch guifg=#0087ff
@@ -148,3 +152,13 @@ hi CocSearch guifg=#0087ff
 lua require("scripts")
 lua require('auto-dark-mode').setup()
 
+
+let g:copilot_filetypes = {
+\ 'xml': v:false,
+\ }
+
+let g:go_gopls_settings = {
+\ 'ui.diagnostic.staticcheck': v:true, 
+\}
+
+set foldopen-=block
