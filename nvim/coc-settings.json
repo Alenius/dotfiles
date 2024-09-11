@@ -1,0 +1,14 @@
+{
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform"],
+      "initializationOptions": {}
+    }
+  },
+    "go.goplsOptions": {
+      "staticcheck": true
+  }
+}
+
+
