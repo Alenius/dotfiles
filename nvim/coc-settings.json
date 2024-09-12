@@ -2,13 +2,16 @@
   "languageserver": {
     "terraform": {
       "command": "terraform-lsp",
-      "filetypes": ["terraform"],
-      "initializationOptions": {}
+      "filetypes": [
+        "terraform"
+      ]
     }
   },
-    "go.goplsOptions": {
-      "staticcheck": true
+  "[go][json]": {
+    "coc.preferences.formatOnSave": true
+  },
+  "go.goplsOptions": {
+    "staticcheck": true,
+    "gofumpt": true
   }
 }
-
-

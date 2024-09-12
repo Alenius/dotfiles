@@ -25,7 +25,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jparise/vim-graphql'
 Plug 'preservim/nerdtree'
 Plug 'yssl/QFEnter'
