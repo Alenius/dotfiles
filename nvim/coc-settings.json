@@ -7,7 +7,7 @@
       ]
     }
   },
-  "[go][json]": {
+  "[go][json][sql]": {
     "coc.preferences.formatOnSave": true
   },
   "go.goplsOptions": {

@@ -29,6 +29,9 @@ Plug 'jparise/vim-graphql'
 Plug 'preservim/nerdtree'
 Plug 'yssl/QFEnter'
 Plug 'github/copilot.vim'
+Plug 'zbirenbaum/copilot.lua'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
 Plug 'f-person/auto-dark-mode.nvim'
 call plug#end()
 
@@ -161,3 +164,15 @@ let g:go_gopls_settings = {
 \}
 
 set foldopen-=block
+
+lua << EOF
+require("CopilotChat").setup {
+  debug = true, -- Enable debugging
+  -- See Configuration section for rest
+}
+EOF
+
+try
+    nmap <silent> [c :call CocAction('diagnosticNext')<cr>
+    nmap <silent> ]c :call CocAction('diagnosticPrevious')<cr>
+endtry
