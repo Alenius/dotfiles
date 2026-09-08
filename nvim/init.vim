@@ -28,10 +28,9 @@ Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'jparise/vim-graphql'
 Plug 'preservim/nerdtree'
 Plug 'yssl/QFEnter'
-Plug 'github/copilot.vim'
 Plug 'zbirenbaum/copilot.lua'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
+Plug 'CopilotC-Nvim/CopilotChat.nvim'  
 Plug 'f-person/auto-dark-mode.nvim'
 call plug#end()
 
