@@ -166,7 +166,7 @@ set foldopen-=block
 
 lua << EOF
 require("CopilotChat").setup {
-  debug = true, -- Enable debugging
+  debug = false, -- Enable debugging
   -- See Configuration section for rest
 }
 EOF
