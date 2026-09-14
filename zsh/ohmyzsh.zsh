@@ -69,7 +69,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  vi-mode
+  vi-mode # use plugin instead of manual set -o vi
 )
 
 source $ZSH/oh-my-zsh.sh
