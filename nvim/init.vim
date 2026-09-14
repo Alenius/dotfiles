@@ -31,6 +31,7 @@ Plug 'yssl/QFEnter'
 Plug 'zbirenbaum/copilot.lua'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'CopilotC-Nvim/CopilotChat.nvim'  
+Plug 'copilotlsp-nvim/copilot-lsp'
 Plug 'f-person/auto-dark-mode.nvim'
 call plug#end()
 
@@ -152,6 +153,13 @@ hi CocSearch guifg=#0087ff
 
 lua require("scripts")
 lua require('auto-dark-mode').setup()
+lua << EOF
+require('copilot').setup({
+  suggestion = {
+      auto_trigger = true, -- show suggestion automatically
+    }
+})
+EOF
 
 
 let g:copilot_filetypes = {
