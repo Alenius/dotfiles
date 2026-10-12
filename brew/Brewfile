@@ -1,0 +1,73 @@
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.14"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
+# Script to export current AWS SSO credentials or run a sub-process with them
+brew "aws2-wrap"
+# Official Amazon AWS command-line interface
+brew "awscli"
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Super fast CLI tool to decode and encode JWTs built in Rust
+brew "jwt-cli"
+# Powerful, lightweight programming language
+brew "lua"
+# Utility for directing compilation
+brew "make"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Internet file retriever
+brew "wget"
+# Brings the power of Copilot coding agent directly to your terminal
+cask "copilot-cli"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
+# Open-source cross-platform alternative to AirDrop
+cask "localsend"
+vscode "golang.go"
+vscode "ms-vscode.makefile-tools"
+vscode "vscodevim.vim"
+go "github.com/bufbuild/buf/cmd/buf"
+go "github.com/northvolt/tools/bump"
+go "github.com/northvolt/tools/check-deps"
+go "github.com/northvolt/tools/cp-shadow"
+go "github.com/northvolt/tools/crypto_browse"
+go "github.com/northvolt/tools/dlq"
+go "github.com/go-delve/delve/cmd/dlv"
+go "github.com/northvolt/tools/eventhash"
+go "github.com/northvolt/tools/flatten"
+go "github.com/northvolt/tools/get-deps"
+go "mvdan.cc/gofumpt"
+go "golang.org/x/tools/gopls"
+go "github.com/northvolt/tools/gosv"
+go "github.com/northvolt/tools/gql"
+go "github.com/northvolt/tools/gwip"
+go "github.com/northvolt/tools/iot-tool"
+go "github.com/northvolt/tools/kstream"
+go "github.com/northvolt/tools/label2identity"
+go "github.com/northvolt/tools/labelgen"
+go "github.com/northvolt/tools/nclogin"
+go "github.com/northvolt/tools/ncr"
+go "github.com/northvolt/tools/ncservice"
+go "github.com/northvolt/tools/nv-auth-debug"
+go "connectrpc.com/connect/cmd/protoc-gen-connect-go"
+go "google.golang.org/protobuf/cmd/protoc-gen-go"
+go "github.com/northvolt/tools/qr"
+go "github.com/northvolt/tools/rdslocal"
+go "github.com/northvolt/tools/replay"
+go "honnef.co/go/tools/cmd/staticcheck"
+go "github.com/northvolt/tools/testscenarious"
