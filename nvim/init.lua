@@ -1,0 +1,7 @@
+require("config.plugins")
+require("config.options")
+require("config.theme")
+require("config.keymaps")
+require("config.coc")
+require("config.commands")
+require("config.plugin_settings")

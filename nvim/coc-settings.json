@@ -18,6 +18,9 @@
   "[go][json][sql]": {
     "coc.preferences.formatOnSave": true
   },
+  "Lua.runtime.version": "LuaJIT",
+  "Lua.diagnostics.globals": ["vim"],
+  "Lua.workspace.checkThirdParty": false,
   "go.goplsOptions": {
     "staticcheck": true,
     "gofumpt": true
