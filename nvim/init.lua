@@ -1,7 +1,4 @@
-require("config.plugins")
-require("config.options")
-require("config.theme")
+require("config.options") -- sets <leader>, must come before lazy.nvim and any mappings
 require("config.keymaps")
-require("config.coc")
 require("config.commands")
-require("config.plugin_settings")
+require("config.lazy")

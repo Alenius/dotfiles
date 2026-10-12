@@ -23,6 +23,9 @@ opt.incsearch = true  -- show matches while typing the pattern
 opt.ignorecase = true -- case-insensitive search...
 opt.smartcase = true  -- ...unless the pattern contains an uppercase letter
 
+-- Time (ms) of inactivity before CursorHold fires (diagnostic float, gitgutter updates)
+opt.updatetime = 300
+
 -- Buffers/windows
 opt.hidden = true     -- allow switching away from a buffer with unsaved changes
 opt.splitright = true -- open vertical splits to the right
