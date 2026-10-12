@@ -46,8 +46,10 @@ opt.listchars:append({ space = "·" })
 opt.title = true
 opt.titlestring = "%f"
 
--- Folding: syntax-based, and open folds when jumping into them
+-- Folding: syntax-based by default (treesitter.lua switches to tree-sitter folds where a parser
+-- exists), start with all folds open, and open folds when jumping into them
 -- (search, marks, etc.) but not on block motions like { and }
 opt.foldmethod = "syntax"
+opt.foldlevelstart = 99
 opt.foldopen:append("jump")
 opt.foldopen:remove("block")

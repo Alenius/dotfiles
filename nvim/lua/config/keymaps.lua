@@ -1,6 +1,6 @@
 local map = vim.keymap.set
 
--- Plugin-specific mappings (fzf, fugitive, NERDTree, coc) live with their plugin in lua/plugins/
+-- Plugin-specific mappings (fzf, fugitive, NERDTree, LSP) live with their plugin in lua/plugins/
 
 -- Toggle between the current and previous buffer
 map("n", "<leader>p", "<C-^>")

@@ -84,8 +84,9 @@ return {
           map("gi", vim.lsp.buf.implementation, "Go to implementation")
           map("gr", vim.lsp.buf.references, "References")
           map("<leader>rn", vim.lsp.buf.rename, "Rename symbol")
-          map("[c", function() vim.diagnostic.jump({ count = 1, float = true }) end, "Next diagnostic")
-          map("]c", function() vim.diagnostic.jump({ count = -1, float = true }) end, "Previous diagnostic")
+          -- [d / ]d: same keys as Neovim's defaults, leaving [c / ]c to gitgutter's hunk navigation
+          map("]d", function() vim.diagnostic.jump({ count = 1, float = true }) end, "Next diagnostic")
+          map("[d", function() vim.diagnostic.jump({ count = -1, float = true }) end, "Previous diagnostic")
           -- apply every "fix all" code action the attached servers offer (eslint, gopls, ts_ls, ...)
           map("<leader>af", function()
             vim.lsp.buf.code_action({ context = { only = { "source.fixAll" } }, apply = true })
@@ -94,10 +95,10 @@ return {
         end,
       })
 
-      -- format on save for go/json/sql, when a server that can format is attached
+      -- format on save for go, when a server that can format is attached
       vim.api.nvim_create_autocmd("BufWritePre", {
         group = vim.api.nvim_create_augroup("UserLspFormat", { clear = true }),
-        pattern = { "*.go", "*.json", "*.sql" },
+        pattern = "*.go",
         callback = function(ev)
           if #vim.lsp.get_clients({ bufnr = ev.buf, method = "textDocument/formatting" }) > 0 then
             vim.lsp.buf.format({ bufnr = ev.buf, async = false })

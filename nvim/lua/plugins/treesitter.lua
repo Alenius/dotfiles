@@ -32,11 +32,14 @@ return {
         end
       end)
 
-      -- turn on tree-sitter highlighting wherever a parser is available
+      -- turn on tree-sitter highlighting and folding wherever a parser is available
       vim.api.nvim_create_autocmd("FileType", {
         group = vim.api.nvim_create_augroup("UserTreesitter", { clear = true }),
         callback = function(ev)
-          pcall(vim.treesitter.start, ev.buf)
+          if pcall(vim.treesitter.start, ev.buf) then
+            vim.opt_local.foldmethod = "expr"
+            vim.opt_local.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+          end
         end,
       })
     end,
