@@ -72,7 +72,9 @@ return {
             vim.keymap.set("n", lhs, rhs, { buffer = ev.buf, silent = true, desc = desc })
           end
 
-          map("gh", vim.lsp.buf.hover, "Hover documentation")
+          map("gh", function()
+            vim.lsp.buf.hover({ border = "rounded", max_width = 90, max_height = 30 })
+          end, "Hover documentation (press again to focus the window)")
           map("gd", vim.lsp.buf.definition, "Go to definition")
           map("gsd", function()
             vim.cmd("vsplit")
