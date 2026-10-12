@@ -72,6 +72,8 @@ plugins=(
   vi-mode # use plugin instead of manual set -o vi
 )
 
+export VI_MODE_DISABLE_CLIPBOARD=true
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
