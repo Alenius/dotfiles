@@ -9,6 +9,13 @@ local parsers = {
 }
 
 return {
+  -- pins the signature of the enclosing function/type to the top of the window
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    event = { "BufReadPost", "BufNewFile" },
+    opts = { max_lines = 3 },
+  },
+
   {
     "nvim-treesitter/nvim-treesitter",
     branch = "main",

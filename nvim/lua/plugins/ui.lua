@@ -6,6 +6,16 @@ return {
     end,
   },
 
+  -- pops up the available mappings after pressing a prefix key like <leader> or g
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {},
+    keys = {
+      { "<leader>?", function() require("which-key").show({ global = false }) end, desc = "Buffer-local keymaps" },
+    },
+  },
+
   {
     "preservim/nerdtree",
     cmd = { "NERDTree", "NERDTreeToggle", "NERDTreeFind", "NERDTreeFocus" },

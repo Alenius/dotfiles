@@ -29,7 +29,7 @@ return {
       vim.lsp.config("gopls", {
         settings = {
           gopls = {
-            staticcheck = true,
+            staticcheck = false, -- staticcheck runs standalone instead (see lint.lua), so results aren't duplicated
             gofumpt = true,
             usePlaceholders = true,
           },
@@ -95,11 +95,26 @@ return {
         end,
       })
 
-      -- format on save for go, when a server that can format is attached
+      -- add missing and remove unused imports; synchronous so it finishes before the file is written
+      local function organize_imports(bufnr)
+        local client = vim.lsp.get_clients({ bufnr = bufnr, name = "gopls" })[1]
+        if not client then return end
+        local params = vim.lsp.util.make_range_params(0, client.offset_encoding)
+        params.context = { only = { "source.organizeImports" }, diagnostics = {} }
+        local res = client:request_sync("textDocument/codeAction", params, 1000, bufnr)
+        for _, action in ipairs(res and res.result or {}) do
+          if action.edit then
+            vim.lsp.util.apply_workspace_edit(action.edit, client.offset_encoding)
+          end
+        end
+      end
+
+      -- organize imports, then format, on save for go, when a server that can format is attached
       vim.api.nvim_create_autocmd("BufWritePre", {
         group = vim.api.nvim_create_augroup("UserLspFormat", { clear = true }),
         pattern = "*.go",
         callback = function(ev)
+          organize_imports(ev.buf)
           if #vim.lsp.get_clients({ bufnr = ev.buf, method = "textDocument/formatting" }) > 0 then
             vim.lsp.buf.format({ bufnr = ev.buf, async = false })
           end
