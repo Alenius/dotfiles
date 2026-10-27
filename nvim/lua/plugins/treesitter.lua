@@ -13,18 +13,18 @@ return {
   {
     "nvim-treesitter/nvim-treesitter-context",
     event = { "BufReadPost", "BufNewFile" },
-    opts = { max_lines = 3 },
+    opts = { max_lines = 3, separator = "-" }, -- a row of dashes under the context sets it apart from the code
     config = function(_, opts)
       require("treesitter-context").setup(opts)
 
       -- the default background is NormalFloat, which is a flat gray in gruvbox; use the editor
-      -- background and a thin underline in gruvbox's gray instead
+      -- background, with a row of dashes (see opts) in gruvbox's gray
       local function set_highlights()
         local gray = vim.api.nvim_get_hl(0, { name = "LineNr", link = false }).fg
         vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Normal" })
         vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { link = "LineNr" })
-        vim.api.nvim_set_hl(0, "TreesitterContextBottom", { underline = true, sp = gray })
-        vim.api.nvim_set_hl(0, "TreesitterContextLineNumberBottom", { underline = true, sp = gray })
+        local bg = vim.api.nvim_get_hl(0, { name = "Normal", link = false }).bg
+        vim.api.nvim_set_hl(0, "TreesitterContextSeparator", { fg = gray, bg = bg })
       end
       set_highlights()
       -- colorscheme changes (including auto-dark-mode flipping 'background') reset the groups
